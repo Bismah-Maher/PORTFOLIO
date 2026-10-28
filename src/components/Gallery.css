@@ -1,0 +1,585 @@
+/* ========================================
+   GALLERY SECTION
+======================================== */
+
+.gallery-section {
+  background-color: var(--bg-yellow, #FEF096);
+  padding: clamp(3rem, 7vw, 7rem) clamp(1rem, 4vw, 4rem);
+  position: relative;
+  border-bottom: 2px solid rgba(142, 15, 15, 0.15);
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.gallery-section *,
+.gallery-section *::before,
+.gallery-section *::after {
+  box-sizing: border-box;
+}
+
+/* ========================================
+   GALLERY HEADER
+======================================== */
+
+.gallery-header {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto clamp(2.5rem, 5vw, 5rem);
+}
+
+.header-badge {
+  display: inline-block;
+  max-width: 100%;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 800;
+  color: rgb(142, 15, 15);
+  background: rgba(142, 15, 15, 0.08);
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  border: 1px solid rgba(142, 15, 15, 0.2);
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-family: var(--font-heading, sans-serif);
+  font-size: clamp(2rem, 5vw, 4.5rem);
+  color: rgb(142, 15, 15);
+  margin: 0 0 0.75rem;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  overflow-wrap: break-word;
+}
+
+.gallery-subtitle {
+  font-family: var(--font-body, sans-serif);
+  font-size: clamp(0.95rem, 1.5vw, 1.15rem);
+  color: #231F20;
+  opacity: 0.85;
+  max-width: 650px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ========================================
+   PROJECT SHOWCASE
+======================================== */
+
+.projects-showcase-list {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(3rem, 7vw, 6rem);
+}
+
+.project-row {
+  width: 100%;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: clamp(1.5rem, 4vw, 4rem);
+  align-items: center;
+}
+
+.project-row-reverse {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+}
+
+.project-visual-frame,
+.project-details {
+  min-width: 0;
+  width: 100%;
+}
+
+.project-row-reverse .project-visual-frame {
+  order: 2;
+}
+
+.project-row-reverse .project-details {
+  order: 1;
+}
+
+/* ========================================
+   PROJECT IMAGE / BROWSER FRAME
+======================================== */
+
+.project-visual-frame {
+  background-color: #ffffff;
+  border: 2px solid rgb(142, 15, 15);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 8px 8px 0 rgba(142, 15, 15, 0.2);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.browser-dots {
+  background-color: #f0f0f0;
+  padding: 0.6rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.browser-dots span {
+  flex: 0 0 10px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+}
+
+.browser-dots span:nth-child(1) {
+  background-color: #ff5f56;
+}
+
+.browser-dots span:nth-child(2) {
+  background-color: #ffbd2e;
+}
+
+.browser-dots span:nth-child(3) {
+  background-color: #27c93f;
+}
+
+.project-img-container {
+  width: 100%;
+  height: clamp(200px, 28vw, 360px);
+  overflow: hidden;
+  position: relative;
+}
+
+.project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+/* ========================================
+   PROJECT DETAILS
+======================================== */
+
+.project-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.project-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  max-width: 100%;
+}
+
+.project-number {
+  font-family: var(--font-heading, sans-serif);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 900;
+  color: rgb(142, 15, 15);
+  line-height: 1;
+}
+
+.project-category {
+  font-size: clamp(0.7rem, 1vw, 0.85rem);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgb(142, 15, 15);
+  font-weight: 800;
+  border-left: 2px solid rgb(142, 15, 15);
+  padding-left: 0.75rem;
+}
+
+.project-title {
+  font-family: var(--font-heading, sans-serif);
+  font-size: clamp(1.7rem, 3.2vw, 2.75rem);
+  color: rgb(142, 15, 15);
+  margin: 0 0 1rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.project-desc {
+  font-family: var(--font-body, sans-serif);
+  font-size: clamp(0.95rem, 1.3vw, 1.05rem);
+  color: #231F20;
+  line-height: 1.75;
+  margin: 0 0 1.5rem;
+  opacity: 0.9;
+  max-width: 100%;
+}
+
+/* ========================================
+   TECHNOLOGY TAGS
+======================================== */
+
+.project-tags {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.75rem;
+}
+
+.tag-pill {
+  max-width: 100%;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: rgb(142, 15, 15);
+  background-color: rgba(142, 15, 15, 0.08);
+  padding: 0.35rem 0.7rem;
+  border-radius: 4px;
+  border: 1px solid rgba(142, 15, 15, 0.15);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  overflow-wrap: anywhere;
+}
+
+/* ========================================
+   PROJECT BUTTONS
+======================================== */
+
+.project-actions {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.btn-primary-action,
+.btn-secondary-action {
+  max-width: 100%;
+  min-height: 46px;
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  text-align: center;
+  text-decoration: none;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.btn-primary-action {
+  background-color: rgb(142, 15, 15);
+  color: var(--bg-yellow, #FEF096);
+  padding: 0.85rem 1.25rem;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 14px rgba(142, 15, 15, 0.25);
+}
+
+.btn-primary-action .arrow-icon {
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+.btn-secondary-action {
+  color: rgb(142, 15, 15);
+  padding: 0.85rem 1rem;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-secondary-action::after {
+  content: "";
+  position: absolute;
+  bottom: 7px;
+  left: 1rem;
+  right: 1rem;
+  height: 2px;
+  background-color: rgb(142, 15, 15);
+  transition: transform 0.3s ease;
+  transform-origin: right;
+}
+
+/* ========================================
+   LAPTOPS & SMALL DESKTOPS
+======================================== */
+
+@media (max-width: 1100px) {
+  .project-row,
+  .project-row-reverse {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 2rem;
+  }
+
+  .project-img-container {
+    height: 280px;
+  }
+
+  .project-actions {
+    gap: 0.5rem;
+  }
+
+  .btn-primary-action {
+    padding: 0.8rem 1rem;
+  }
+}
+
+/* ========================================
+   TABLETS
+======================================== */
+
+@media (max-width: 850px) {
+  .gallery-section {
+    padding: 4rem 1.5rem;
+  }
+
+  .gallery-header {
+    margin-bottom: 3rem;
+  }
+
+  .projects-showcase-list {
+    gap: 4rem;
+  }
+
+  .project-row,
+  .project-row-reverse {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+  }
+
+  /* Keep images first on every row */
+  .project-row .project-visual-frame,
+  .project-row-reverse .project-visual-frame {
+    order: 1;
+  }
+
+  .project-row .project-details,
+  .project-row-reverse .project-details {
+    order: 2;
+  }
+
+  .project-img-container {
+    height: clamp(240px, 45vw, 380px);
+  }
+
+  .project-details {
+    width: 100%;
+  }
+
+  .project-title {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+  }
+}
+
+/* ========================================
+   MOBILE PHONES
+======================================== */
+
+@media (max-width: 550px) {
+  .gallery-section {
+    padding: 3rem 1rem;
+  }
+
+  .gallery-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .header-badge {
+    font-size: 0.7rem;
+    padding: 0.35rem 0.75rem;
+    letter-spacing: 0.07em;
+  }
+
+  .section-title {
+    font-size: clamp(2rem, 9vw, 3rem);
+    line-height: 1.12;
+  }
+
+  .gallery-subtitle {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .projects-showcase-list {
+    gap: 3.5rem;
+  }
+
+  .project-row,
+  .project-row-reverse {
+    gap: 1.5rem;
+  }
+
+  .project-visual-frame {
+    border-radius: 9px;
+    box-shadow: 5px 5px 0 rgba(142, 15, 15, 0.2);
+  }
+
+  .browser-dots {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .browser-dots span {
+    flex-basis: 8px;
+    width: 8px;
+    height: 8px;
+  }
+
+  .project-img-container {
+    height: clamp(190px, 58vw, 280px);
+  }
+
+  .project-meta {
+    gap: 0.6rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .project-number {
+    font-size: 1.7rem;
+  }
+
+  .project-category {
+    font-size: 0.7rem;
+    padding-left: 0.6rem;
+  }
+
+  .project-title {
+    font-size: clamp(1.65rem, 7vw, 2.2rem);
+    line-height: 1.15;
+    margin-bottom: 0.75rem;
+  }
+
+  .project-desc {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+  }
+
+  .project-tags {
+    gap: 0.4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .tag-pill {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.55rem;
+  }
+
+  .project-actions {
+    align-items: stretch;
+    gap: 0.65rem;
+  }
+
+  .btn-primary-action,
+  .btn-secondary-action {
+    font-size: 0.78rem;
+    min-height: 44px;
+    letter-spacing: 0.03em;
+  }
+
+  .btn-primary-action {
+    padding: 0.75rem 0.9rem;
+  }
+
+  .btn-secondary-action {
+    padding: 0.75rem 0.65rem;
+  }
+
+  .btn-secondary-action::after {
+    left: 0.65rem;
+    right: 0.65rem;
+    bottom: 5px;
+  }
+}
+
+/* ========================================
+   VERY SMALL PHONES
+======================================== */
+
+@media (max-width: 360px) {
+  .gallery-section {
+    padding: 2.5rem 0.75rem;
+  }
+
+  .section-title {
+    font-size: 1.9rem;
+  }
+
+  .project-img-container {
+    height: 180px;
+  }
+
+  .project-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-primary-action,
+  .btn-secondary-action {
+    width: 100%;
+  }
+
+  .btn-secondary-action::after {
+    left: 25%;
+    right: 25%;
+  }
+}
+
+/* ========================================
+   HOVER EFFECTS — MOUSE DEVICES ONLY
+======================================== */
+
+@media (hover: hover) and (pointer: fine) {
+  .project-row:hover .project-visual-frame {
+    transform: translateY(-6px);
+    box-shadow: 12px 12px 0 rgba(142, 15, 15, 0.3);
+  }
+
+  .project-row:hover .project-img {
+    transform: scale(1.04);
+  }
+
+  .btn-primary-action:hover {
+    background-color: #6b0b0b;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(142, 15, 15, 0.35);
+  }
+
+  .btn-primary-action:hover .arrow-icon {
+    transform: translate(3px, -3px);
+  }
+
+  .btn-secondary-action:hover::after {
+    transform: scaleX(0);
+  }
+}
+
+/* ========================================
+   ACCESSIBILITY
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .project-visual-frame,
+  .project-img,
+  .btn-primary-action,
+  .btn-primary-action .arrow-icon,
+  .btn-secondary-action,
+  .btn-secondary-action::after {
+    transition: none;
+  }
+}

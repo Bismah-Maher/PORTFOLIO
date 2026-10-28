@@ -1,0 +1,254 @@
+/* ========================================
+   ABOUT SECTION — BASE
+======================================== */
+
+.about-section {
+  width: 100%;
+  background-color: var(--bg-cream, #FFF9E8);
+  padding: clamp(3rem, 7vw, 6rem) clamp(1rem, 4vw, 4rem);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.about-section *,
+.about-section *::before,
+.about-section *::after {
+  box-sizing: border-box;
+}
+
+/* ========================================
+   SECTION TITLE
+======================================== */
+
+.about-section .section-title {
+  width: 100%;
+  font-family: var(--font-heading, sans-serif);
+  font-size: clamp(2rem, 4.5vw, 4rem);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: rgb(142, 15, 15);
+  margin: 0 0 clamp(2rem, 4vw, 3rem);
+  overflow-wrap: break-word;
+}
+
+/* ========================================
+   ABOUT GRID
+======================================== */
+
+.about-grid {
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 400px) minmax(0, 1fr);
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: center;
+}
+
+/* ========================================
+   IMAGE FRAME
+======================================== */
+
+.about-img-box {
+  width: 100%;
+  min-width: 0;
+  background-color: var(--bg-yellow, #FEF096);
+  padding: clamp(0.75rem, 2vw, 1.5rem);
+  padding-bottom: clamp(1.5rem, 4vw, 3rem);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.06);
+  /* Tilt removed here */
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* Keep the head visible */
+
+.about-img-box img {
+  display: block;
+  width: 100%;
+  height: clamp(280px, 35vw, 440px);
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* ========================================
+   ABOUT TEXT
+======================================== */
+
+.about-text {
+  width: 100%;
+  min-width: 0;
+  max-width: 650px;
+  font-family: var(--font-body, sans-serif);
+  font-size: clamp(0.95rem, 1.4vw, 1.1rem);
+  font-weight: 400;
+  color: var(--text-dark, #231F20);
+  line-height: 1.85;
+  overflow-wrap: break-word;
+}
+
+.about-text p {
+  margin: 0 0 1.25rem;
+}
+
+.about-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* ========================================
+   LAPTOPS
+======================================== */
+
+@media (max-width: 1100px) {
+  .about-grid {
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    gap: 2.5rem;
+  }
+
+  .about-img-box img {
+    height: clamp(300px, 38vw, 400px);
+    object-position: center top;
+  }
+}
+
+/* ========================================
+   TABLETS
+======================================== */
+
+@media (max-width: 900px) {
+  .about-section {
+    padding: 4rem 2rem;
+  }
+
+  .about-section .section-title {
+    margin-bottom: 2.5rem;
+  }
+
+  .about-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2.5rem;
+    max-width: 700px;
+  }
+
+  .about-img-box {
+    width: min(100%, 480px);
+    margin: 0 auto;
+    padding: 1rem 1rem 2rem;
+  }
+
+  .about-img-box img {
+    width: 100%;
+    height: clamp(340px, 65vw, 480px);
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .about-text {
+    max-width: 100%;
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+}
+
+/* ========================================
+   MOBILE PHONES
+======================================== */
+
+@media (max-width: 550px) {
+  .about-section {
+    padding: 3rem 1.1rem;
+  }
+
+  .about-section .section-title {
+    font-size: clamp(2rem, 9vw, 3rem);
+    line-height: 1.12;
+    margin-bottom: 2rem;
+  }
+
+  .about-grid {
+    gap: 2rem;
+  }
+
+  .about-img-box {
+    width: 100%;
+    max-width: 380px;
+    padding: 0.75rem 0.75rem 1.5rem;
+    /* Tilt removed here */
+  }
+
+  .about-img-box img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: center 10%;
+  }
+
+  .about-text {
+    font-size: 0.95rem;
+    line-height: 1.8;
+  }
+
+  .about-text p {
+    margin-bottom: 1rem;
+  }
+}
+
+/* ========================================
+   VERY SMALL PHONES
+======================================== */
+
+@media (max-width: 360px) {
+  .about-section {
+    padding: 2.5rem 0.85rem;
+  }
+
+  .about-section .section-title {
+    font-size: 1.9rem;
+  }
+
+  .about-grid {
+    gap: 1.5rem;
+  }
+
+  .about-img-box {
+    padding: 0.6rem 0.6rem 1.25rem;
+  }
+
+  .about-img-box img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: center 5%;
+  }
+
+  .about-text {
+    font-size: 0.9rem;
+    line-height: 1.75;
+  }
+}
+
+/* ========================================
+   HOVER EFFECT — MOUSE DEVICES
+======================================== */
+
+@media (hover: hover) and (pointer: fine) {
+  .about-img-box:hover {
+    /* Kept only the translateY lift effect, removed rotation */
+    transform: translateY(-3px);
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* ========================================
+   ACCESSIBILITY
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .about-img-box {
+    transition: none;
+  }
+}

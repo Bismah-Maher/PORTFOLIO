@@ -1,0 +1,251 @@
+/* ========================================
+   HERO SECTION — BASE / DESKTOP
+======================================== */
+
+.hero-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  background-color: var(--bg-yellow, #FEF096);
+  width: 100%;
+  min-height: 100svh;
+  align-items: stretch;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.hero-section *,
+.hero-section *::before,
+.hero-section *::after {
+  box-sizing: border-box;
+}
+
+/* ========================================
+   LEFT CONTENT
+======================================== */
+
+.hero-left {
+  min-width: 0;
+  padding: clamp(2.5rem, 5vw, 5rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.hero-title {
+  font-family: var(--font-heading, sans-serif);
+  font-size: clamp(2.8rem, 5.5vw, 6rem);
+  font-weight: 900;
+  color: rgb(142, 15, 15);
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+  margin: 0 0 1.5rem;
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+
+.hero-subtitle {
+  font-family: var(--font-heading, sans-serif);
+  font-weight: 700;
+  font-size: clamp(0.95rem, 1.3vw, 1.1rem);
+  color: var(--text-dark, #231F20);
+  line-height: 1.7;
+  margin: 0 0 2rem;
+  max-width: 400px;
+  letter-spacing: -0.01em;
+}
+
+/* ========================================
+   CONTACT BUTTON
+======================================== */
+
+.contact-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-start;
+  max-width: 100%;
+  min-height: 48px;
+  padding: 0.95rem 2rem;
+  background-color: rgb(142, 15, 15);
+  color: var(--bg-yellow, #FEF096);
+  font-family: var(--font-heading, sans-serif);
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid rgb(142, 15, 15);
+  border-radius: 4px;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease,
+    background-color 0.2s ease;
+}
+
+/* ========================================
+   RIGHT IMAGE
+======================================== */
+
+.hero-right {
+  min-width: 0;
+  min-height: 0;
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* ========================================
+   LAPTOPS
+======================================== */
+
+@media (min-width: 901px) {
+  .hero-section {
+    min-height: 100vh;
+    min-height: 100svh;
+  }
+
+  .hero-left {
+    padding-left: clamp(2.5rem, 5.5vw, 6rem);
+    padding-right: clamp(2rem, 4vw, 4rem);
+  }
+}
+
+/* ========================================
+   TABLETS
+======================================== */
+
+@media (max-width: 900px) {
+  .hero-section {
+    grid-template-columns: minmax(0, 1fr);
+    min-height: auto;
+    height: auto;
+  }
+
+  .hero-left {
+    padding: clamp(3rem, 8vw, 5rem) clamp(1.5rem, 6vw, 4rem);
+  }
+
+  .hero-title {
+    font-size: clamp(3rem, 8vw, 5rem);
+    max-width: 750px;
+  }
+
+  .hero-subtitle {
+    max-width: 550px;
+    margin-bottom: 1.75rem;
+  }
+
+  .hero-right {
+    height: clamp(300px, 55vw, 500px);
+  }
+
+  .hero-img {
+    width: 100%;
+    height: 100%;
+    object-position: center 25%;
+  }
+}
+
+/* ========================================
+   MOBILE PHONES
+======================================== */
+
+@media (max-width: 550px) {
+  .hero-section {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero-left {
+    padding: 3rem 1.25rem 2.5rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2.5rem, 11vw, 3.8rem);
+    line-height: 1;
+    letter-spacing: -0.035em;
+    margin-bottom: 1.1rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-btn {
+    width: auto;
+    max-width: 100%;
+    min-height: 46px;
+    padding: 0.85rem 1.4rem;
+    font-size: 0.85rem;
+  }
+
+  .hero-right {
+    height: clamp(260px, 80vw, 390px);
+  }
+
+  .hero-img {
+    object-position: center 20%;
+  }
+}
+
+/* ========================================
+   VERY SMALL PHONES
+======================================== */
+
+@media (max-width: 360px) {
+  .hero-left {
+    padding: 2.5rem 1rem 2rem;
+  }
+
+  .hero-title {
+    font-size: 2.35rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .contact-btn {
+    width: 100%;
+    padding: 0.8rem 1rem;
+  }
+
+  .hero-right {
+    height: 250px;
+  }
+}
+
+/* ========================================
+   HOVER — MOUSE DEVICES ONLY
+======================================== */
+
+@media (hover: hover) and (pointer: fine) {
+  .contact-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+  }
+}
+
+/* ========================================
+   REDUCED MOTION ACCESSIBILITY
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-btn {
+    transition: none;
+  }
+}

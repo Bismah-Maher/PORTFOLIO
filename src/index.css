@@ -13,12 +13,29 @@
   box-sizing: border-box;
 }
 
+
+html {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+}
+
 body {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
   font-family: var(--font-body);
   color: var(--text-dark);
   background-color: var(--bg-cream);
   line-height: 1.5;
-  overflow-x: hidden;
+  overflow-x: clip;
+}
+
+#root,
+.app-container {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
 }
 
 h1, h2, h3, h4, .heading-font {

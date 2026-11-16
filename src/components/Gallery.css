@@ -1,3 +1,4 @@
+
 /* ========================================
    GALLERY SECTION
 ======================================== */
@@ -317,6 +318,47 @@
 }
 
 /* ========================================
+   VIEW MORE / VIEW LESS BUTTON
+======================================== */
+
+.gallery-toggle-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: clamp(3rem, 6vw, 5rem) auto 0;
+}
+
+.gallery-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  padding: 1rem 2rem;
+
+  background-color: rgb(142, 15, 15);
+  color: #FEF096;
+
+  border: 2px solid rgb(142, 15, 15);
+  border-radius: 4px;
+
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.toggle-arrow {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+/* ========================================
    LAPTOPS & SMALL DESKTOPS
 ======================================== */
 
@@ -363,7 +405,6 @@
     gap: 2rem;
   }
 
-  /* Keep images first on every row */
   .project-row .project-visual-frame,
   .project-row-reverse .project-visual-frame {
     order: 1;
@@ -505,6 +546,17 @@
     right: 0.65rem;
     bottom: 5px;
   }
+
+  .gallery-toggle-container {
+    margin-top: 3rem;
+  }
+
+  .gallery-toggle-btn {
+    width: 100%;
+    max-width: 280px;
+    padding: 0.9rem 1.2rem;
+    font-size: 0.8rem;
+  }
 }
 
 /* ========================================
@@ -545,6 +597,7 @@
 ======================================== */
 
 @media (hover: hover) and (pointer: fine) {
+
   .project-row:hover .project-visual-frame {
     transform: translateY(-6px);
     box-shadow: 12px 12px 0 rgba(142, 15, 15, 0.3);
@@ -567,11 +620,27 @@
   .btn-secondary-action:hover::after {
     transform: scaleX(0);
   }
+
+  .gallery-toggle-btn:hover {
+    background-color: transparent;
+    color: rgb(142, 15, 15);
+    transform: translateY(-3px);
+    box-shadow: 5px 5px 0 rgba(142, 15, 15, 0.2);
+  }
+
+  .gallery-toggle-btn:hover .toggle-arrow {
+    transform: translateY(3px);
+  }
 }
 
 /* ========================================
    ACCESSIBILITY
 ======================================== */
+
+.gallery-toggle-btn:focus-visible {
+  outline: 3px solid rgb(142, 15, 15);
+  outline-offset: 4px;
+}
 
 @media (prefers-reduced-motion: reduce) {
   .project-visual-frame,
@@ -579,7 +648,9 @@
   .btn-primary-action,
   .btn-primary-action .arrow-icon,
   .btn-secondary-action,
-  .btn-secondary-action::after {
+  .btn-secondary-action::after,
+  .gallery-toggle-btn,
+  .toggle-arrow {
     transition: none;
   }
 }

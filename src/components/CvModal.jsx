@@ -1,6 +1,6 @@
 import React from 'react';
 import './CvModal.css';
-import cvImg from '../images/cv.png'; // Update with your actual CV image filename
+import cvPreviewImg from '../images/cv.png'; // or '../images/cv.jpg'
 
 export default function CvModal({ isOpen, onClose }) {
   if (!isOpen) return null;
@@ -11,16 +11,16 @@ export default function CvModal({ isOpen, onClose }) {
         <div className="cv-modal-header">
           <h2 className="cv-modal-title">My Resume / CV</h2>
           <div className="cv-modal-actions">
-            <a 
-              href={cvImg} 
-              download="Bismah_Maher_CV.png" 
+            <a
+              href="/Bismah_Maher_CV.pdf"
+              download="Bismah_Maher_CV.pdf"
               className="cv-download-btn"
             >
               DOWNLOAD
             </a>
-            <button 
-              className="cv-close-btn" 
-              onClick={onClose} 
+            <button
+              className="cv-close-btn"
+              onClick={onClose}
               aria-label="Close CV modal"
             >
               &times;
@@ -29,7 +29,11 @@ export default function CvModal({ isOpen, onClose }) {
         </div>
 
         <div className="cv-image-wrapper">
-          <img src={cvImg} alt="Bismah Maher CV" className="cv-preview-img" />
+          <img
+            src={cvPreviewImg}
+            alt="Bismah Maher CV"
+            className="cv-preview-img"
+          />
         </div>
       </div>
     </div>

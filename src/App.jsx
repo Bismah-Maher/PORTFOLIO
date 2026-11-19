@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import Education from './components/Education';
+import Services from './components/Services';
 import Gallery from './components/Gallery';
 import ContactModal from './components/ContactModal';
 import CvModal from './components/CvModal';
@@ -31,6 +32,10 @@ export default function App() {
         <section id="education">
           <Education />
         </section>
+
+         <section id="services">
+  <Services onOpenContact={() => setIsContactOpen(true)} />
+</section>
         
         <section id="gallery">
           <Gallery />

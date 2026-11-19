@@ -1,0 +1,912 @@
+
+/* =========================================
+   SERVICES SECTION
+========================================= */
+
+.services-section {
+  --service-maroon: rgb(142, 15, 15);
+  --service-yellow: #FEF096;
+  --service-cream: #FFF9E8;
+  --service-ink: #231F20;
+
+  position: relative;
+  isolation: isolate;
+
+  width: 100%;
+  overflow: hidden;
+
+  background: var(--service-cream);
+  color: var(--service-ink);
+
+  padding: clamp(4rem, 7vw, 7rem) clamp(1.25rem, 5vw, 5rem);
+
+  box-sizing: border-box;
+}
+
+.services-section *,
+.services-section *::before,
+.services-section *::after {
+  box-sizing: border-box;
+}
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.services-container {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1250px;
+
+  margin: 0 auto;
+}
+
+/* =========================================
+   BACKGROUND DETAIL
+========================================= */
+
+.services-bg-number {
+  position: absolute;
+  z-index: 0;
+
+  top: 4%;
+  right: -1%;
+
+  font-size: clamp(12rem, 25vw, 25rem);
+  font-weight: 900;
+  line-height: 1;
+
+  color: rgba(142, 15, 15, 0.025);
+
+  pointer-events: none;
+  user-select: none;
+}
+
+/* =========================================
+   TOP LINE
+========================================= */
+
+.services-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+
+  padding-bottom: 1.1rem;
+
+  border-bottom: 1px solid rgba(142, 15, 15, 0.22);
+}
+
+.services-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+
+  color: var(--service-maroon);
+
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.services-index {
+  color: rgba(35, 31, 32, 0.55);
+
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.services-heading-area {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+
+  align-items: end;
+  gap: 2.5rem;
+
+  padding: clamp(3rem, 6vw, 5rem) 0;
+}
+
+.services-small-label {
+  display: block;
+
+  margin-bottom: 1rem;
+
+  color: var(--service-maroon);
+
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+}
+
+.services-heading-left h2 {
+  margin: 0;
+
+  font-family: var(--font-heading, sans-serif);
+
+  font-size: clamp(3.4rem, 7vw, 6.5rem);
+  font-weight: 900;
+
+  line-height: 0.95;
+  letter-spacing: -0.075em;
+
+  color: var(--service-maroon);
+}
+
+.services-heading-left h2 span {
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--service-maroon);
+}
+
+.services-heading-right {
+  width: 100%;
+  max-width: 350px;
+
+  padding-bottom: 0.3rem;
+}
+
+.heading-line {
+  width: 45px;
+  height: 4px;
+
+  margin-bottom: 1.2rem;
+
+  background: var(--service-maroon);
+}
+
+.services-heading-right p {
+  margin: 0 0 1.2rem;
+
+  font-family: var(--font-body, sans-serif);
+  font-size: 0.98rem;
+  line-height: 1.8;
+
+  color: rgba(35, 31, 32, 0.78);
+}
+
+.services-heading-note {
+  color: var(--service-maroon);
+
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+/* =========================================
+   SERVICES LIST
+========================================= */
+
+.services-list {
+  width: 100%;
+
+  border-top: 1px solid rgba(142, 15, 15, 0.25);
+}
+
+.service-item {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 55px minmax(0, 1fr) 60px;
+
+  align-items: center;
+  gap: clamp(1rem, 3vw, 2.5rem);
+
+  padding: clamp(2.2rem, 4vw, 3.4rem) 0.75rem;
+
+  border-bottom: 1px solid rgba(142, 15, 15, 0.25);
+
+  transition:
+    padding 0.35s ease,
+    background-color 0.35s ease;
+}
+
+.service-number {
+  align-self: start;
+
+  padding-top: 0.35rem;
+
+  color: rgba(142, 15, 15, 0.6);
+
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+/* =========================================
+   SERVICE CONTENT
+========================================= */
+
+.service-main {
+  min-width: 0;
+}
+
+.service-label {
+  display: block;
+
+  margin-bottom: 0.75rem;
+
+  color: var(--service-maroon);
+
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.service-main h3 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+
+  gap: 0.25em;
+
+  margin: 0 0 0.85rem;
+
+  font-family: var(--font-heading, sans-serif);
+
+  font-size: clamp(1.8rem, 3.5vw, 3.2rem);
+  font-weight: 900;
+
+  line-height: 1.1;
+  letter-spacing: -0.055em;
+
+  color: var(--service-ink);
+}
+
+.service-main h3 span {
+  color: var(--service-maroon);
+}
+
+.service-description {
+  max-width: 620px;
+
+  margin: 0 0 1.2rem;
+
+  font-family: var(--font-body, sans-serif);
+  font-size: 0.9rem;
+  line-height: 1.8;
+
+  color: rgba(35, 31, 32, 0.72);
+}
+
+/* =========================================
+   TECHNOLOGIES
+========================================= */
+
+.service-tech {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.service-tech span {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 0.4rem 0.65rem;
+
+  border: 1px solid rgba(142, 15, 15, 0.2);
+  border-radius: 2px;
+
+  color: var(--service-maroon);
+
+  font-size: 0.63rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+/* =========================================
+   ICON AREA
+========================================= */
+
+.service-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  align-self: stretch;
+}
+
+.service-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 54px;
+  height: 54px;
+
+  border: 1px solid rgba(142, 15, 15, 0.25);
+  border-radius: 50%;
+
+  color: var(--service-maroon);
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.service-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 38px;
+  height: 38px;
+
+  color: var(--service-maroon);
+
+  transition: transform 0.3s ease;
+}
+
+/* =========================================
+   HOVER EFFECTS
+========================================= */
+
+@media (hover: hover) and (pointer: fine) {
+
+  .service-item:hover {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+
+    background: rgba(254, 240, 150, 0.3);
+  }
+
+  .service-item:hover .service-icon {
+    background: var(--service-maroon);
+    color: var(--service-yellow);
+
+    transform: rotate(-8deg);
+  }
+
+  .service-item:hover .service-arrow {
+    transform: translate(4px, -4px);
+  }
+
+  .service-item:hover .service-tech span {
+    background: var(--service-maroon);
+    color: var(--service-cream);
+  }
+}
+
+/* =========================================
+   BOTTOM CTA
+========================================= */
+
+.services-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+
+  margin-top: clamp(3.5rem, 7vw, 6rem);
+
+  padding: clamp(2rem, 4vw, 3.5rem);
+
+  background: var(--service-maroon);
+  color: var(--service-cream);
+}
+
+.services-bottom-text > span {
+  display: block;
+
+  margin-bottom: 0.9rem;
+
+  color: var(--service-yellow);
+
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+}
+
+.services-bottom-text h3 {
+  margin: 0;
+
+  font-family: var(--font-heading, sans-serif);
+
+  font-size: clamp(2.5rem, 5vw, 4.2rem);
+  font-weight: 900;
+
+  line-height: 0.98;
+  letter-spacing: -0.06em;
+}
+
+.services-bottom-text h3 span {
+  color: var(--service-yellow);
+}
+
+.services-bottom-text p {
+  margin: 1rem 0 0;
+
+  color: rgba(255, 249, 232, 0.8);
+
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.services-contact-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  color: var(--service-cream);
+  text-decoration: none;
+
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+
+  transition: gap 0.3s ease;
+}
+
+.contact-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  width: 55px;
+  height: 55px;
+
+  border: 1px solid rgba(255, 249, 232, 0.6);
+  border-radius: 50%;
+
+  color: var(--service-yellow);
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.services-contact-link:hover {
+  gap: 1.4rem;
+}
+
+.services-contact-link:hover .contact-circle {
+  background: var(--service-yellow);
+  color: var(--service-maroon);
+
+  transform: rotate(45deg);
+}
+
+/* =========================================
+   FOOTER DETAILS
+========================================= */
+
+.services-footer-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+
+  padding-top: 1.3rem;
+}
+
+.services-footer-line span {
+  color: rgba(35, 31, 32, 0.55);
+
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+}
+
+/* =========================================
+   TABLET RESPONSIVENESS
+========================================= */
+
+@media (max-width: 900px) {
+
+  .services-heading-area {
+    grid-template-columns: 1fr 0.8fr;
+    gap: 1.5rem;
+  }
+
+  .services-heading-left h2 {
+    font-size: clamp(3.3rem, 7vw, 5rem);
+  }
+
+  .service-item {
+    grid-template-columns: 40px minmax(0, 1fr) 50px;
+    gap: 1rem;
+  }
+
+  .service-main h3 {
+    font-size: clamp(1.8rem, 4vw, 2.7rem);
+  }
+
+  .services-bottom {
+    align-items: flex-start;
+  }
+}
+
+/* =========================================
+   SMALL TABLETS
+========================================= */
+
+@media (max-width: 700px) {
+
+  .services-heading-area {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .services-heading-right {
+    max-width: 500px;
+  }
+
+  .services-heading-left h2 {
+    font-size: clamp(3.5rem, 10vw, 5rem);
+  }
+
+  .services-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .services-contact-link {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+/* =========================================
+   MOBILE PHONES
+========================================= */
+
+@media (max-width: 550px) {
+
+  .services-section {
+    padding: 3.5rem 1.1rem;
+  }
+
+  .services-topline {
+    align-items: flex-start;
+  }
+
+  .services-eyebrow {
+    font-size: 0.59rem;
+    letter-spacing: 0.07em;
+  }
+
+  .services-eyebrow svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .services-index {
+    font-size: 0.52rem;
+    text-align: right;
+  }
+
+  .services-heading-area {
+    padding: 3.5rem 0;
+    gap: 1.8rem;
+  }
+
+  .services-small-label {
+    font-size: 0.63rem;
+  }
+
+  .services-heading-left h2 {
+    font-size: clamp(3.3rem, 13vw, 4.7rem);
+  }
+
+  .services-heading-right p {
+    font-size: 0.88rem;
+    line-height: 1.8;
+  }
+
+  .services-heading-note {
+    font-size: 0.55rem;
+  }
+
+  .service-item {
+    grid-template-columns: 27px minmax(0, 1fr);
+    gap: 0.7rem;
+
+    padding: 2.1rem 0.2rem;
+  }
+
+  .service-number {
+    font-size: 0.72rem;
+  }
+
+  .service-label {
+    font-size: 0.57rem;
+  }
+
+  .service-main h3 {
+    font-size: clamp(1.8rem, 7.5vw, 2.45rem);
+    line-height: 1.15;
+    gap: 0.2em;
+  }
+
+  .service-description {
+    font-size: 0.84rem;
+    line-height: 1.75;
+  }
+
+  .service-tech {
+    gap: 0.4rem;
+  }
+
+  .service-tech span {
+    font-size: 0.58rem;
+    padding: 0.35rem 0.5rem;
+  }
+
+  .service-side {
+    grid-column: 2;
+
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 0.5rem;
+  }
+
+  .service-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .service-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .service-arrow {
+    width: 32px;
+    height: 32px;
+  }
+
+  .services-bottom {
+    margin-top: 3.5rem;
+    padding: 1.8rem 1.3rem;
+    gap: 1.7rem;
+  }
+
+  .services-bottom-text > span {
+    font-size: 0.58rem;
+  }
+
+  .services-bottom-text h3 {
+    font-size: clamp(2.6rem, 10vw, 3.5rem);
+  }
+
+  .services-bottom-text p {
+    font-size: 0.8rem;
+  }
+
+  .services-contact-link {
+    font-size: 0.61rem;
+  }
+
+  .contact-circle {
+    width: 47px;
+    height: 47px;
+  }
+
+  .services-footer-line {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 0.8rem 1.3rem;
+  }
+
+  .services-footer-line span {
+    font-size: 0.52rem;
+  }
+
+  .services-bg-number {
+    top: 15%;
+    right: -12%;
+    font-size: 15rem;
+  }
+}
+
+/* =========================================
+   VERY SMALL PHONES
+========================================= */
+
+@media (max-width: 380px) {
+
+  .services-section {
+    padding-left: 0.85rem;
+    padding-right: 0.85rem;
+  }
+
+  .services-index {
+    max-width: 105px;
+  }
+
+  .services-heading-left h2 {
+    font-size: clamp(3rem, 13vw, 3.8rem);
+  }
+
+  .service-item {
+    grid-template-columns: 23px minmax(0, 1fr);
+    gap: 0.5rem;
+  }
+
+  .service-main h3 {
+    font-size: 1.75rem;
+  }
+
+  .service-description {
+    font-size: 0.8rem;
+  }
+
+  .services-bottom {
+    padding: 1.5rem 1rem;
+  }
+
+  .services-footer-line {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+.services-contact-link:focus-visible {
+  outline: 2px solid var(--service-yellow);
+  outline-offset: 5px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .service-item,
+  .service-icon,
+  .service-arrow,
+  .service-tech span,
+  .services-contact-link,
+  .contact-circle {
+    transition: none;
+  }
+}
+@media (max-width: 550px) {
+  .service-title {
+    font-size: clamp(1.65rem, 7vw, 2.4rem);
+    line-height: 1.1;
+    letter-spacing: -0.06em;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  .service-content {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .service-row {
+    min-width: 0;
+    overflow: hidden;
+  }
+}
+
+/* FIX: MOBILE SERVICE HEADING OVERFLOW */
+
+@media (max-width: 550px) {
+  .service-main {
+    min-width: 0;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .service-main h3 {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+
+    font-size: clamp(1.45rem, 6.5vw, 2rem);
+    line-height: 1.2;
+    letter-spacing: -0.045em;
+
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+
+  .service-main h3 span {
+    display: inline;
+    min-width: 0;
+  }
+}
+/* =========================================
+   MOBILE CTA OVERFLOW FIX
+========================================= */
+
+@media (max-width: 550px) {
+
+  .services-bottom {
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+    padding: 1.6rem 1.1rem;
+  }
+
+  .services-bottom-text {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .services-bottom-text h3 {
+    width: 100%;
+    max-width: 100%;
+
+    font-size: clamp(2rem, 8vw, 2.7rem);
+    line-height: 1;
+    letter-spacing: -0.055em;
+
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+
+  .services-bottom-text h3 span {
+    display: inline;
+  }
+
+  .services-bottom-text p {
+    width: 100%;
+    max-width: 100%;
+
+    font-size: 0.78rem;
+    line-height: 1.7;
+
+    overflow-wrap: break-word;
+  }
+
+  .services-contact-link {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+
+/* Keep the original CTA appearance */
+.services-contact-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+
+  background: transparent;
+  color: inherit;
+  border: none;
+  outline: none;
+  box-shadow: none;
+
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.services-contact-link:hover {
+  background: transparent;
+}
+
+.services-contact-link .contact-circle {
+  flex-shrink: 0;
+}

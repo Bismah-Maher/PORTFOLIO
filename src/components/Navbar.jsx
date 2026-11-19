@@ -25,7 +25,7 @@ export default function Navbar({ onOpenContact, onOpenCv }) {
       <div className="navbar-container">
         {/* Brand Logo */}
         <a href="#top" className="navbar-logo">
-          BISMAH MAHER<span className="logo-dot">.</span>
+         My Portfolio<span className="logo-dot">.</span>
         </a>
 
         {/* Navigation Links */}
@@ -33,6 +33,7 @@ export default function Navbar({ onOpenContact, onOpenCv }) {
           <a href="#home" onClick={handleLinkClick}>Home</a>
           <a href="#about" onClick={handleLinkClick}>About</a>
           <a href="#education" onClick={handleLinkClick}>Education</a>
+          <a href="#services" onClick={handleLinkClick}>Services</a>
           <a href="#gallery" onClick={handleLinkClick}>Projects</a>
           <a href="#contact" className="nav-contact-btn" onClick={handleContactClick}>
             Contact
